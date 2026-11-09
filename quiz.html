@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | EduLearn</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        Edu<span class="light">Learn</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tutorial.html">Tutorials</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About &amp; Progress</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Test Your Knowledge</h1>
+        <p>Choose a topic, answer every question, then submit to see your score.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="quiz-topics">
+          <button class="filter-btn quiz-topic-btn active" data-topic="html">HTML Quiz</button>
+          <button class="filter-btn quiz-topic-btn" data-topic="css">CSS Quiz</button>
+          <button class="filter-btn quiz-topic-btn" data-topic="javascript">JavaScript Quiz</button>
+        </div>
+
+        <div class="quiz-container">
+          <h2 class="section-title" id="quizTitle">HTML Quiz</h2>
+          <p class="section-subtitle">5 multiple-choice questions</p>
+
+          <!-- Score shown after submitting -->
+          <div class="score-box" id="scoreBox">
+            <p>Your score</p>
+            <div class="score-number" id="scoreNumber">0 / 0</div>
+            <p><strong id="scorePercent">0%</strong></p>
+            <p id="scoreMessage"></p>
+            <p style="margin-top:10px"><a href="about.html#progress">View all your results &rarr;</a></p>
+          </div>
+
+          <!-- Questions (filled in by script.js) -->
+          <div id="quizQuestions"></div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-large" id="submitQuiz">Submit Answers</button>
+            <button class="btn btn-large btn-outline" id="retryQuiz" style="display:none">Try Again</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> EduLearn &middot; A group project for learning HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

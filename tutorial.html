@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials | EduLearn</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        Edu<span class="light">Learn</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tutorial.html">Tutorials</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About &amp; Progress</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Tutorials</h1>
+        <p>Learn the basics step by step. Copy the code, try it, then mark each lesson as completed.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container tutorial-layout">
+
+        <!-- Lesson menu -->
+        <aside class="sidebar">
+          <h4>HTML</h4>
+          <ul>
+            <li><a href="#html-basics">Page Structure</a></li>
+            <li><a href="#html-forms">Forms &amp; Inputs</a></li>
+          </ul>
+          <h4>CSS</h4>
+          <ul>
+            <li><a href="#css-basics">Selectors &amp; Colors</a></li>
+            <li><a href="#css-layout">Box Model &amp; Flexbox</a></li>
+          </ul>
+          <h4>JavaScript</h4>
+          <ul>
+            <li><a href="#js-basics">Variables &amp; Functions</a></li>
+            <li><a href="#js-dom">The DOM &amp; Events</a></li>
+          </ul>
+        </aside>
+
+        <div class="lessons">
+
+          <!-- ================= HTML ================= -->
+          <section class="course-section" id="html">
+            <h2>HTML Basics</h2>
+
+            <article class="lesson" id="html-basics">
+              <h3>1. Page Structure</h3>
+              <p><strong>HTML (HyperText Markup Language)</strong> gives a web page its structure. It uses <em>tags</em> such as <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> to tell the browser what each piece of content is.</p>
+              <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code> tells the browser this is an HTML5 page.</li>
+                <li><code>&lt;head&gt;</code> holds information about the page, like its title.</li>
+                <li><code>&lt;body&gt;</code> holds everything you see on the screen.</li>
+                <li>Most tags come in pairs: an opening tag <code>&lt;p&gt;</code> and a closing tag <code>&lt;/p&gt;</code>.</li>
+              </ul>
+              <div class="code-block"><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;a href="https://www.example.com"&gt;Visit a link&lt;/a&gt;
+  &lt;img src="cat.jpg" alt="A cute cat"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+              <div class="lesson-footer"><button class="btn complete-btn">Mark as Completed</button></div>
+            </article>
+
+            <article class="lesson" id="html-forms">
+              <h3>2. Forms &amp; Inputs</h3>
+              <p>Forms let users type and send information, like a sign-up or contact form. Each input should have a <code>&lt;label&gt;</code> so everyone knows what to type.</p>
+              <ul>
+                <li><code>type="text"</code>, <code>"email"</code> and <code>"password"</code> create different text boxes.</li>
+                <li><code>type="radio"</code> lets users pick one option; <code>"checkbox"</code> lets them pick many.</li>
+                <li><code>&lt;select&gt;</code> creates a dropdown menu.</li>
+              </ul>
+              <div class="code-block"><pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" placeholder="Your name"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" required&gt;
+
+  &lt;label for="course"&gt;Course:&lt;/label&gt;
+  &lt;select id="course"&gt;
+    &lt;option&gt;HTML&lt;/option&gt;
+    &lt;option&gt;CSS&lt;/option&gt;
+    &lt;option&gt;JavaScript&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;button type="submit"&gt;Sign Up&lt;/button&gt;
+&lt;/form&gt;</code></pre></div>
+              <div class="lesson-footer"><button class="btn complete-btn">Mark as Completed</button></div>
+            </article>
+          </section>
+
+          <!-- ================= CSS ================= -->
+          <section class="course-section" id="css">
+            <h2>CSS Basics</h2>
+
+            <article class="lesson" id="css-basics">
+              <h3>3. Selectors &amp; Colors</h3>
+              <p><strong>CSS (Cascading Style Sheets)</strong> controls how HTML looks: colors, fonts, sizes and spacing. A CSS rule has a <em>selector</em> (what to style) and <em>declarations</em> (how to style it).</p>
+              <ul>
+                <li><code>p</code> selects every paragraph (tag selector).</li>
+                <li><code>.card</code> selects elements with <code>class="card"</code>.</li>
+                <li><code>#header</code> selects the element with <code>id="header"</code>.</li>
+              </ul>
+              <div class="code-block"><pre><code>/* Tag selector */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Class selector */
+.card {
+  color: #1e293b;
+  font-size: 18px;
+}
+
+/* ID selector */
+#header {
+  background-color: #4f46e5;
+  color: white;
+  text-align: center;
+}
+
+/* Link it in your HTML head: */
+/* &lt;link rel="stylesheet" href="style.css"&gt; */</code></pre></div>
+              <div class="lesson-footer"><button class="btn complete-btn">Mark as Completed</button></div>
+            </article>
+
+            <article class="lesson" id="css-layout">
+              <h3>4. Box Model &amp; Flexbox</h3>
+              <p>Every element is a box made of <strong>content</strong>, <strong>padding</strong> (space inside the border), <strong>border</strong> and <strong>margin</strong> (space outside the border). <strong>Flexbox</strong> makes it easy to line boxes up in rows or columns.</p>
+              <div class="code-block"><pre><code>/* The box model */
+.box {
+  width: 200px;
+  padding: 20px;          /* inside space */
+  border: 2px solid #4f46e5;
+  margin: 10px;           /* outside space */
+}
+
+/* Flexbox: put items side by side */
+.container {
+  display: flex;
+  justify-content: space-between; /* horizontal */
+  align-items: center;            /* vertical */
+  gap: 16px;
+}
+
+/* Responsive: stack items on small screens */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}</code></pre></div>
+              <div class="lesson-footer"><button class="btn complete-btn">Mark as Completed</button></div>
+            </article>
+          </section>
+
+          <!-- ================= JAVASCRIPT ================= -->
+          <section class="course-section" id="javascript">
+            <h2>JavaScript Basics</h2>
+
+            <article class="lesson" id="js-basics">
+              <h3>5. Variables &amp; Functions</h3>
+              <p><strong>JavaScript</strong> makes web pages interactive. <em>Variables</em> store data and <em>functions</em> are reusable blocks of code.</p>
+              <ul>
+                <li><code>let</code> creates a variable you can change; <code>const</code> creates one you can't.</li>
+                <li>Common data types: strings (<code>"text"</code>), numbers (<code>42</code>), booleans (<code>true</code>/<code>false</code>) and arrays (<code>[1, 2, 3]</code>).</li>
+                <li><code>if</code> statements make decisions, and loops repeat code.</li>
+              </ul>
+              <div class="code-block"><pre><code>// Variables
+let studentName = "Ada";
+const passMark = 50;
+let score = 75;
+
+// Function
+function checkResult(name, score) {
+  if (score &gt;= passMark) {
+    return name + " passed with " + score + "%!";
+  } else {
+    return name + " needs more practice.";
+  }
+}
+
+console.log(checkResult(studentName, score));
+
+// Loop through an array
+const topics = ["HTML", "CSS", "JavaScript"];
+for (let i = 0; i &lt; topics.length; i++) {
+  console.log("Learning " + topics[i]);
+}</code></pre></div>
+              <div class="lesson-footer"><button class="btn complete-btn">Mark as Completed</button></div>
+            </article>
+
+            <article class="lesson" id="js-dom">
+              <h3>6. The DOM &amp; Events</h3>
+              <p>The <strong>DOM (Document Object Model)</strong> is how JavaScript sees your HTML page. You can select elements, change their text or style, and react to <em>events</em> like clicks.</p>
+              <div class="code-block"><pre><code>&lt;!-- HTML --&gt;
+&lt;h2 id="message"&gt;Hello!&lt;/h2&gt;
+&lt;button id="changeBtn"&gt;Click me&lt;/button&gt;
+
+&lt;script&gt;
+  // Select elements
+  const message = document.getElementById("message");
+  const button = document.getElementById("changeBtn");
+
+  // React to a click
+  button.addEventListener("click", function () {
+    message.textContent = "You clicked the button!";
+    message.style.color = "#4f46e5";
+  });
+&lt;/script&gt;</code></pre></div>
+              <div class="lesson-footer"><button class="btn complete-btn">Mark as Completed</button></div>
+            </article>
+          </section>
+
+          <div style="text-align:center">
+            <a href="quiz.html" class="btn btn-large">Ready? Take the Quiz &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> EduLearn &middot; A group project for learning HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

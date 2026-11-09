@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Progress | EduLearn</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        Edu<span class="light">Learn</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tutorial.html">Tutorials</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About &amp; Progress</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>About EduLearn &amp; Your Progress</h1>
+        <p>Who we are, and how far you've come</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="panel">
+            <h2>Our Purpose</h2>
+            <p>EduLearn is a free learning website that helps beginners understand the three core languages of the web: <strong>HTML</strong> for structure, <strong>CSS</strong> for style and <strong>JavaScript</strong> for interactivity.</p>
+            <p style="margin-top:10px">Our goal is to make coding simple and fun through short tutorials, real code examples, quick quizzes and a progress tracker that keeps you motivated.</p>
+          </div>
+
+          <div class="panel">
+            <h2>Our Team</h2>
+            <!-- Replace with your group members' names and roles -->
+            <ul class="team-list">
+              <li><strong>Member 1</strong> &ndash; Home &amp; Courses pages</li>
+              <li><strong>Member 2</strong> &ndash; Tutorial page</li>
+              <li><strong>Member 3</strong> &ndash; Quiz page</li>
+              <li><strong>Member 4</strong> &ndash; About &amp; Progress page</li>
+              <li><strong>Member 5</strong> &ndash; Styling &amp; testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="progress" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Your Progress</h2>
+        <p class="section-subtitle">Saved automatically in this browser</p>
+
+        <div class="about-grid">
+          <div class="panel">
+            <h2>Completed Lessons</h2>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <p id="progressText"></p>
+            <ul class="lesson-list" id="lessonList"></ul>
+          </div>
+
+          <div class="panel">
+            <h2>Quiz Results</h2>
+            <div style="overflow-x:auto">
+              <table>
+                <thead>
+                  <tr><th>Quiz</th><th>Last Score</th><th>Best</th><th>Attempts</th><th>Date</th></tr>
+                </thead>
+                <tbody id="quizResults"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="reset-area">
+          <button class="btn btn-danger" id="resetProgress">Reset Progress</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> EduLearn &middot; A group project for learning HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

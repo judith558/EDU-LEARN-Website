@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | EduLearn</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        Edu<span class="light">Learn</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tutorial.html">Tutorials</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About &amp; Progress</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Welcome message, search bar and start button -->
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to EduLearn</h1>
+        <p>Learn to build websites from scratch with free, beginner-friendly lessons in HTML, CSS and JavaScript. Practise with quizzes and track your progress as you go.</p>
+
+        <form class="search-box" id="homeSearch">
+          <input type="text" id="homeSearchInput" placeholder="Search courses, e.g. forms, flexbox, DOM...">
+          <button type="submit">Search</button>
+        </form>
+
+        <a href="courses.html" class="btn btn-large">Start Learning &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Course cards (filled in by script.js) -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Core Courses</h2>
+        <p class="section-subtitle">The three building blocks of every website</p>
+        <div class="card-grid" id="homeCourses"></div>
+      </div>
+    </section>
+
+    <section class="section features">
+      <div class="container">
+        <h2 class="section-title">Why Learn with EduLearn?</h2>
+        <p class="section-subtitle">Everything you need to go from zero to your first website</p>
+        <div class="card-grid">
+          <div class="feature"><div class="icon">📘</div><h3>Clear Tutorials</h3><p>Short lessons with real code examples you can copy and try.</p></div>
+          <div class="feature"><div class="icon">📝</div><h3>Interactive Quizzes</h3><p>Test yourself and get instant scores and feedback.</p></div>
+          <div class="feature"><div class="icon">📈</div><h3>Track Progress</h3><p>Your completed lessons and scores are saved in your browser.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> EduLearn &middot; JICODEWORS</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
